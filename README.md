@@ -1,6 +1,6 @@
-# 🧩 Users App – Node.js Backend API
+# 🧩 Users App (Node.js + Express + MongoDB)
 
-This is a simple Express.js backend for handling user authentication and product management using MongoDB.
+A backend API for user authentication and product management, built using Node.js, Express, MongoDB (via Mongoose), and JWT.
 
 ---
 
@@ -9,75 +9,91 @@ This is a simple Express.js backend for handling user authentication and product
 users-app/
 ├── tests/ # Unit tests
 │ └── user.test.js
-├── controllers/ # Route controllers
+├── controllers/ # Logic for routes
 │ ├── auth.controller.js
 │ ├── user.controller.js
 │ └── user.product.controller.js
 ├── files/ # Static HTML files
 │ ├── auth/
 │ │ └── login.html
-│ ├── user/
-│ │ └── index.html
-│ └── assets/ # (Optional static files)
-├── logger/ # Custom logger setup
+│ └── user/
+│ └── index.html
+├── logger/ # Custom logging
 │ └── logger.js
 ├── middlewares/ # Middleware functions
 │ └── auth.middleware.js
-├── models/ # Mongoose models
-│ ├── user.model.js
-│ └── product.model.js
-├── routes/ # Express routes
+├── models/ # Mongoose schemas
+│ ├── product.model.js
+│ └── user.model.js
+├── routes/ # API route handlers
 │ ├── auth.routes.js
 │ ├── user.routes.js
 │ └── user.products.routes.js
-├── services/ # (Business logic placeholder)
-├── app.js # App entry point
+├── services/ # Business logic (if any)
+├── app.js # Entry point
 ├── package.json
-├── package-lock.json
-└── README.md
+├── README.md
+└── .env # Environment variables
 
-yaml
-Copy
-Edit
 
 ---
 
 ## 🚀 Features
 
-- 🔐 JWT-based user authentication
-- 👥 User CRUD operations
-- 📦 Product CRUD endpoints
-- 🧪 Basic unit testing
-- 🧱 MVC architecture
-- 📝 Custom logger
-- 🖼️ Static file support
+- 🔐 User authentication (JWT)
+- 🧑‍💻 User CRUD APIs
+- 📦 Product CRUD APIs
+- 📂 Static file rendering (HTML)
+- 🧪 Basic unit tests with Jest/Mocha
+- 🧱 Modular MVC architecture
+- 📊 Custom logger for request tracking
 
 ---
 
-## 📦 Installation
+## 🛠️ Technologies
+
+- **Node.js**
+- **Express**
+- **MongoDB + Mongoose**
+- **JWT (Authentication)**
+- **HTML (Static rendering)**
+- **Jest / Mocha** (Testing)
+- **Dotenv** for config
+
+---
+
+## ⚙️ Setup & Installation
+
+1. **Clone the repository**
+
 git clone https://github.com/YOUR_USERNAME/users-app.git
 cd users-app
+
+Install dependencies
+
 npm install
+Create .env file
+PORT=3000
+MONGODB_URI=mongodb://localhost:27017/users-app
+JWT_SECRET=your_jwt_secret_key
+Start the app
 
 
-▶️ Running the Server
+# For production
 npm start
-For development with auto-reload:
+
+# For development (with nodemon)
 npm run dev
 
 
-🧪 Running Tests
-npm test
-
-
-📡 API Endpoints
+📡 API Overview
 
 🔐 Auth Routes
 Method	Endpoint	Description
 POST	/api/auth/register	Register new user
-POST	/api/auth/login	Login and get JWT
+POST	/api/auth/login	Authenticate user
 
-👥 User Routes
+👤 User Routes
 Method	Endpoint	Description
 GET	/api/users	Get all users
 GET	/api/users/:id	Get user by ID
@@ -87,17 +103,6 @@ DELETE	/api/users/:id	Delete user
 📦 Product Routes
 Method	Endpoint	Description
 GET	/api/products	Get all products
-POST	/api/products	Add a new product
-PUT	/api/products/:id	Update a product
-DELETE	/api/products/:id	Delete a product
-
-
-🛠️ Tech Stack
-
-Node.js
-Express.js
-MongoDB + Mongoose
-JWT Authentication
-HTML (Static rendering)
-Mocha / Chai (or Jest)
-Custom Middleware
+POST	/api/products	Create new product
+PUT	/api/products/:id	Update product
+DELETE	/api/products/:id	Delete product
