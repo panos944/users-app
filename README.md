@@ -35,7 +35,7 @@ users-app/
 ├── package.json
 ├── README.md
 └── .env # Environment variables
-
+```
 
 ## 🚀 Features
 
