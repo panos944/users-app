@@ -6,35 +6,34 @@ A backend API for user authentication and product management, built using Node.j
 
 ## 📁 Project Structure
 
-users-app/
-├── tests/ # Unit tests
-│   └── user.test.js
-├── controllers/ # Logic for routes
-│   ├── auth.controller.js
-│   ├── user.controller.js
-│   └── user.product.controller.js
-├── files/ # Static HTML files
-│   ├── auth/
-│   │   └── login.html
-│   └── user/
-│       └── index.html
-├── logger/ # Custom logging
-│   └── logger.js
-├── middlewares/ # Middleware functions
-│   └── auth.middleware.js
-├── models/ # Mongoose schemas
-│   ├── product.model.js
-│   └── user.model.js
-├── routes/ # API route handlers
-│   ├── auth.routes.js
-│   ├── user.routes.js
-│   └── user.products.routes.js
-├── services/ # Business logic (if any)
-├── app.js # Entry point
-├── package.json
-├── README.md
-└── .env # Environment variables
-
+- users-app/
+    - tests/ # Unit tests
+        - user.test.js
+    - controllers/ # Logic for routes
+        - auth.controller.js
+        - user.controller.js
+        - user.product.controller.js
+    - files/ # Static HTML files
+        - auth/
+            - login.html
+        - user/
+            - index.html
+    - logger/ # Custom logging
+        - logger.js
+    - middlewares/ # Middleware functions
+        - auth.middleware.js
+    - models/ # Mongoose schemas
+        - product.model.js
+        - user.model.js
+    - routes/ # API route handlers
+        - auth.routes.js
+        - user.routes.js
+        - user.products.routes.js
+    - services/ # Business logic (if any)
+    - app.js # Entry point
+    - package.json
+    - README.md
+    - .env # Environment variables
 
 ---
 
