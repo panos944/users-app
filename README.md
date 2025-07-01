@@ -45,6 +45,9 @@ users-app/
 ├── package-lock.json
 └── README.md
 
+yaml
+Copy
+Edit
 
 ---
 
@@ -67,58 +70,83 @@ users-app/
    ```bash
    git clone https://github.com/YOUR_USERNAME/users-app.git
    cd users-app
+Install dependencies
 
-   
-2. Install dependencies
+bash
+Copy
+Edit
 npm install
+Create a .env file (if needed):
 
+env
+Copy
+Edit
+PORT=3000
+MONGODB_URI=mongodb://localhost:27017/users-app
+JWT_SECRET=your_jwt_secret
+Start the server
 
-3. Start the server
+bash
+Copy
+Edit
 npm start
-
-
 📡 API Endpoints
-
 Auth
 POST /api/auth/register - Register a new user
+
 POST /api/auth/login - Login and receive token
 
 Users
 GET /api/users - Get all users (protected)
+
 GET /api/users/:id - Get user by ID
+
 PUT /api/users/:id - Update user
+
 DELETE /api/users/:id - Delete user
 
 Products
 GET /api/products - Get all products
+
 POST /api/products - Create a new product
+
 PUT /api/products/:id - Update product
+
 DELETE /api/products/:id - Delete product
 
-
 ✅ Testing
-
 Basic unit tests exist under __tests__/.
 
 Run tests with:
+
+bash
+Copy
+Edit
 npm test
-
-
 🧱 Tech Stack
-
 Node.js
+
 Express.js
+
 MongoDB / Mongoose
+
 JWT for Auth
+
 HTML (static files)
+
 Mocha/Chai (or Jest – depending on test setup)
+
 Custom Middleware
+
 Logger Utility
 
-
 📌 Notes
-
 The services/ folder is a placeholder for business logic (can be expanded).
+
 Logger utility can be expanded with Winston/Morgan.
+
 All API endpoints can be tested using Postman or curl.
+
 Consider adding CORS and validation middleware for production.
+
+
