@@ -6,7 +6,7 @@ A backend API for user authentication and product management, built using Node.j
 
 ## 📁 Project Structure
 
-"""
+```text
 users-app/
 ├── tests/ # Unit tests
 │   └── user.test.js
@@ -35,9 +35,7 @@ users-app/
 ├── package.json
 ├── README.md
 └── .env # Environment variables
-"""
 
----
 
 ## 🚀 Features
 
