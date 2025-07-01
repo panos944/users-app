@@ -8,27 +8,27 @@ A backend API for user authentication and product management, built using Node.j
 
 users-app/
 ├── tests/ # Unit tests
-│ └── user.test.js
+│   └── user.test.js
 ├── controllers/ # Logic for routes
-│ ├── auth.controller.js
-│ ├── user.controller.js
-│ └── user.product.controller.js
+│   ├── auth.controller.js
+│   ├── user.controller.js
+│   └── user.product.controller.js
 ├── files/ # Static HTML files
-│ ├── auth/
-│ │ └── login.html
-│ └── user/
-│ └── index.html
+│   ├── auth/
+│   │   └── login.html
+│   └── user/
+│       └── index.html
 ├── logger/ # Custom logging
-│ └── logger.js
+│   └── logger.js
 ├── middlewares/ # Middleware functions
-│ └── auth.middleware.js
+│   └── auth.middleware.js
 ├── models/ # Mongoose schemas
-│ ├── product.model.js
-│ └── user.model.js
+│   ├── product.model.js
+│   └── user.model.js
 ├── routes/ # API route handlers
-│ ├── auth.routes.js
-│ ├── user.routes.js
-│ └── user.products.routes.js
+│   ├── auth.routes.js
+│   ├── user.routes.js
+│   └── user.products.routes.js
 ├── services/ # Business logic (if any)
 ├── app.js # Entry point
 ├── package.json
@@ -55,8 +55,8 @@ users-app/
 - **Node.js**
 - **Express**
 - **MongoDB + Mongoose**
-- **JWT (Authentication)**
-- **HTML (Static rendering)**
+- **JWT** (Authentication)
+- **HTML** (Static rendering)
 - **Jest / Mocha** (Testing)
 - **Dotenv** for config
 
@@ -64,45 +64,64 @@ users-app/
 
 ## ⚙️ Setup & Installation
 
-1. **Clone the repository**
+1.  **Clone the repository**
 
-git clone https://github.com/YOUR_USERNAME/users-app.git
-cd users-app
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/users-app.git
+    cd users-app
+    ```
 
-Install dependencies
+2.  **Install dependencies**
 
-npm install
-Create .env file
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/users-app
-JWT_SECRET=your_jwt_secret_key
-Start the app
+    ```bash
+    npm install
+    ```
 
+3.  **Create .env file**
 
-# For production
-npm start
+    Create a file named `.env` in the root directory with the following content:
 
-# For development (with nodemon)
-npm run dev
+    ```
+    PORT=3000
+    MONGODB_URI=mongodb://localhost:27017/users-app
+    JWT_SECRET=your_jwt_secret_key
+    ```
 
+4.  **Start the app**
 
-📡 API Overview
+    ```bash
+    # For production
+    npm start
 
-🔐 Auth Routes
-Method	Endpoint	Description
-POST	/api/auth/register	Register new user
-POST	/api/auth/login	Authenticate user
+    # For development (with nodemon)
+    npm run dev
+    ```
 
-👤 User Routes
-Method	Endpoint	Description
-GET	/api/users	Get all users
-GET	/api/users/:id	Get user by ID
-PUT	/api/users/:id	Update user
-DELETE	/api/users/:id	Delete user
+---
 
-📦 Product Routes
-Method	Endpoint	Description
-GET	/api/products	Get all products
-POST	/api/products	Create new product
-PUT	/api/products/:id	Update product
-DELETE	/api/products/:id	Delete product
+## 📡 API Overview
+
+### 🔐 Auth Routes
+
+| Method | Endpoint          | Description        |
+| :----- | :---------------- | :----------------- |
+| `POST` | `/api/auth/register` | Register new user  |
+| `POST` | `/api/auth/login`    | Authenticate user  |
+
+### 👤 User Routes
+
+| Method | Endpoint        | Description      |
+| :----- | :-------------- | :--------------- |
+| `GET`  | `/api/users`      | Get all users    |
+| `GET`  | `/api/users/:id`  | Get user by ID   |
+| `PUT`  | `/api/users/:id`  | Update user      |
+| `DELETE` | `/api/users/:id` | Delete user      |
+
+### 📦 Product Routes
+
+| Method | Endpoint          | Description        |
+| :----- | :---------------- | :----------------- |
+| `GET`  | `/api/products`     | Get all products   |
+| `POST` | `/api/products`     | Create new product |
+| `PUT`  | `/api/products/:id` | Update product     |
+| `DELETE` | `/api/products/:id`| Delete product     |
