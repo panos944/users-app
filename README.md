@@ -7,22 +7,6 @@ A backend API for user authentication and product management, built using Node.j
 ## 📁 Project Structure
 
 """
-You are absolutely right! My apologies. When I suggested wrapping the file structure in a single code block, I was aiming for exact preservation of your manual formatting, but GitHub's Markdown renderer can be particular about line breaks within such blocks, especially if it interprets them as a single line of text if not properly delimited.
-
-The issue you're seeing, where lines appear "one next to the other rather than one below the other," is almost always due to Markdown interpreting what you intend as a new line as just a continuation of the same line of text.
-
-For the "Project Structure" section, the best way to ensure each path and comment appears on its own line, maintaining the visual hierarchy you've set up, is to use a plain text block or simply ensure each line truly ends with a newline character that Markdown respects.
-
-Let's try these two improved approaches for the "Project Structure" section:
-
-Option 1: Using a Simple Code Block (Ensuring Newlines)
-This is the most common way to display file trees. The key is that each line in your source file must have a true newline character, and the triple backticks `` will preserve exactly what's inside.
-
-Markdown
-
-## 📁 Project Structure
-
-"""
 users-app/
 ├── tests/ # Unit tests
 │   └── user.test.js
